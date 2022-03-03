@@ -1,77 +1,286 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
 /* body{
 
 } */
-/* nav --- */ 
+
+
+/* nav --- */
+
 nav {
     /*background-color: rgb(151, 111, 0);*/
+    height: 60px;
+}
+
+.margin-around {
     width: 82%;
     margin: 0 auto;
-    height: 60px ;
 }
 
 .main-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: stretch;
-        align-content: stretch;
-}
-.chield-1 { 
-        background-color: aqua;
-        height: 300px ;
-        
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 }
 
-
-nav > ul {
+nav>ul {
     list-style-type: none;
-    margin-top: 45px ;
+    margin-top: 45px;
     float: right;
 }
 
-nav > ul > li {
-    
+nav>ul>li {
     display: inline;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif;
+     */
+    font-family: "Cairo", sans-serif;
     font-size: large;
     color: white;
     padding-left: 40px;
-
 }
-.logo { 
+
+nav>ul>li>a:hover {
+    border-bottom: #00ffbc solid 3px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.logo {
     margin-top: 15px;
     display: inline-block;
     height: 45px;
     width: 170px;
     overflow: hidden;
-
 }
-.logo > img {
 
+.logo>img {
     height: 41px;
     width: 170px;
 }
 
 
 /* top  part ******/
-.chield-1 { 
+
+.chield-1 {
     height: 100vh;
-    background-image: url("../IMG/background-div-1.jpg") ;
+    background-image: url("../IMG/background-div-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-   
 }
 
-.perfect { 
+
+/* fo r perfect text */
+
+.perfect {
+    margin-top: 100px;
     font-family: "Cairo", sans-serif;
+    font-size: 80pt;
+    color: #fff;
     line-height: 100px;
-    font-size: 70pt;
-    color: white;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+
+/*for gum text */
+
+.gum {
+    line-height: 100px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 80pt;
+    color: #00ffbc;
+}
+
+
+/* for text under gym word */
+
+.best-text {
+    margin-top: 20px;
+    line-height: 30px;
+    font-family: "Cairo", sans-serif;
+    font-size: 18pt;
+    font-weight: 400;
+    color: #fff;
+    border-left: #00ffbc 4px solid;
+    padding-left: 7px;
+    border-radius: 3px;
+}
+
+.reg-button {
+    margin-top: 20px;
+    padding: 3px 15px;
+    color: #00ffbc;
+    border: 4px solid #00ffbc;
+    background-color: #00ffbb00;
+    font-family: "Cairo", sans-serif;
+    font-size: 12pt;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.reg-button:hover {
+    background-color: #00ffbc;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+
+/* child 2  ***************************************************/
+
+.chield-2 {
+    height: 95vh;
+    background-color: #071812;
+    background-image: url("../IMG/man-lifts-weght.png");
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    background-position: 95% 100%;
+    width: 100%;
+}
+
+.chield-2>.left>.perfect {
+    font-size: 40pt;
+    font-style: italic;
+    line-height: 60px;
+}
+
+.chield-2>.left>.perfect>span {
+    color: #00ffbc;
+}
+
+.chield-2>.left>.perfect::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 5px;
+    background: #00ffbc;
+    border-radius: 4px;
+}
+
+.chield-2>.left>.artic,
+.chield-3>.right>.artic {
+    margin-top: 50px;
+    color: #fff;
+    border: none;
+    width: 45%;
+    font-size: 15pt;
+    line-height: 20px;
+}
+
+.chield-2>.left>.reg-button,
+.chield-3>.right>.reg-button {
+    padding: 5px 30px;
+}
+
+
+/* child 3 ***************************************************/
+
+.chield-3 {
+    height: 100vh;
+    background-image: url("../IMG/background-div-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.chield-3>.right {
+    margin-right: 8%;
+    margin-top: 17%;
+    text-align: center;
+    float: right;
+    width: 50%;
+}
+
+.chield-3>.right>.perfect,
+.chield-4>.left>.perfect {
+    margin-top: 0;
+    font-size: 40pt;
+    line-height: 60px;
+}
+
+.chield-3>.right>.perfect>span {
+    color: #00ffbc;
+}
+
+.chield-3>.right>.artic {
+    width: 100%;
+    /* border: 4px solid #00ffbc; */
+    margin-left: 100px;
+    font-size: 14pt;
+    line-height: 22px;
+    width: 430px;
+}
+
+.chield-3>.right>.artic>span {
+    margin-top: 15px;
+    display: block;
+}
+
+
+/* child 4 .................................... */
+
+.chield-4 {
+    height: 45vh;
+    background-color: #071812;
+    background-image: url("../IMG/weght.png");
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    background-position: 95% 100%;
+    width: 100%;
+}
+
+.chield-4>.left>.perfect {
+    color: #00ffbc;
+    margin-top: 30px;
+}
+
+.chield-4>.left>p {
+    border: none;
+    width: 70%;
+    font-size: 12pt;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.chield-4>.left>p>span {
+    display: block;
+    margin-top: 15px;
+}
+
+footer {
+    padding: 0;
+    height: 10vh;
+    background-color: #020a07;
+    margin: 0px;
+}
+
+footer>.perfect {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15pt;
+    color: #00ffbc;
+    line-height: 22px;
+}
+
+footer>p {
+    color: #fff;
+}
+
+footer>p>span {
+    margin-right: 30px;
+    font-family: "Cairo", sans-serif;
+    line-height: 22px;
+}
+
+footer>p>span:last-child {
+    float: right;
 }
