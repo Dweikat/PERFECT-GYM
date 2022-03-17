@@ -11,18 +11,25 @@
 <body>
     <div class="main-container">
 
-        <div class="chield-1">
+        <div class="chield-1" id="home">
             <div class="margin-around">
                 <nav>
+                    <a href="#" class="toggle-button">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
                     <div class="logo"><img src="../IMG/logo.png" alt="logo"></div>
-                    <ul>
-                        <li><a>Home</a></li>
-                        <li><a>Service</a></li>
-                        <li><a>Abuot us</a></li>
-                        <li><a>Contact</a></li>
+                    <div class="navbar-links">
+                        <ul>
+                            <li><a href="#home"><span>Home</span></a></li>
+                            <li><a href="#service"><span>Service</span> </a></li>
+                            <li><a href="#abuot"><span>Abuot us</span> </a></li>
+                            <li><a href="#contact"><span>Contact</span> </a></li>
 
 
-                    </ul>
+                        </ul>
+                    </div>
                 </nav>
                 <div class="perfect">PERFECT</div>
                 <div class="gum">GYM</div>
@@ -34,7 +41,7 @@
         </div>
 
         <!-- child 2 ------------------------------- -->
-        <div class="chield-2 ">
+        <div class="chield-2 " id="service">
             <div class="left margin-around  ">
                 <div class="perfect ">WELCOME TO <span>PREGYM</span></div>
                 <p class="artic best-text">
@@ -62,7 +69,8 @@
 
             </div>
         </div>
-        <div class="chield-4">
+        <!-- child 4 ----------------------------- -->
+        <div class="chield-4" id="abuot">
             <div class="left margin-around">
                 <div class="perfect">
                     About us
@@ -78,7 +86,7 @@
             </div>
         </div>
 
-        <footer>
+        <footer id="contact">
             <div class="perfect margin-around">
                 CONTACT
             </div>
@@ -92,3 +100,12 @@
 </body>
 
 </html>
+
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>
